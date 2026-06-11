@@ -19,6 +19,8 @@ For other part of the project, please refer to:
    - 
 
 ## Support models
+**If you want to support other models which compatible with OpenAI/Anthropic API,use --base_url argument to set the base url.**
+
 Tested:
    - Deepseek
       - deepseek-v4-flash
@@ -55,7 +57,6 @@ Not tested:
    - Kimi
       - kimi-k2.6
       - kimi-k2.5
-**If you want to support other models which compatible with OpenAI/Anthropic API,use --base_url argument to set the base url.**
 
 ## Getting stuffs ready to roll:
 ### Clone this repo
@@ -63,9 +64,11 @@ Not tested:
 git clone https://github.com/xiaoliyuanpp/Digital_Life_Reforged.git --recursive
 ```
 ### Install
-   *Only Windows* Download [Python 3.10 For Windows](https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe)
+   *Only Windows* Download [Python 3.10 For Windows](https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe)  
+
    Run ```install.bat``` for fast installation
-   **For full guide,please read [Install Guide](Install.md)
+   
+   For full guide,please read [Install Guide](Install.md)
 
 ### Download models
    [百度网盘](https://pan.baidu.com/s/1EnHDPADNdhDl71x_DHeElg?pwd=75gr)  
