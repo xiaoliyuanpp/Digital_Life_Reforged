@@ -43,16 +43,17 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--chatVer", type=int, nargs='?', required=True)
     parser.add_argument("--APIKey", type=str, nargs='?', required=False)
-    parser.add_argument("--email", type=str, nargs='?', required=False)
-    parser.add_argument("--password", type=str, nargs='?', required=False)
-    parser.add_argument("--accessToken", type=str, nargs='?', required=False)
+    # parser.add_argument("--email", type=str, nargs='?', required=False)
+    # parser.add_argument("--password", type=str, nargs='?', required=False)
+    # parser.add_argument("--accessToken", type=str, nargs='?', required=False)
     parser.add_argument("--proxy", type=str, nargs='?', required=False)
     parser.add_argument("--paid", type=str2bool, nargs='?', required=False)
     parser.add_argument("--model", type=str, nargs='?', required=False)
     parser.add_argument("--stream", type=str2bool, nargs='?', required=True)
     parser.add_argument("--character", type=str, nargs='?', required=True)
-    parser.add_argument("--ip", type=str, nargs='?', required=False)
-    parser.add_argument("--brainwash", type=str2bool, nargs='?', required=False)
+    # parser.add_argument("--ip", type=str, nargs='?', required=False)
+    # parser.add_argument("--brainwash", type=str2bool, nargs='?', required=False)
+    parser.add_argument("--base_url", type=str, nargs='?', required=False)
     return parser.parse_args()
 
 
@@ -62,7 +63,7 @@ class Server():
         self.addr = None
         self.conn = None
         logging.info('Initializing Server...')
-        self.host = socket.gethostbyname(socket.gethostname())
+        self.host = "0.0.0.0" #L
         self.port = 38438
         self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 10240000)
@@ -101,7 +102,7 @@ class Server():
             while True:
                 try:
                     file = self.__receive_file()
-                    # print('file received: %s' % file)
+                    # print('fisle received: %s' % file)
                     with open(self.tmp_recv_file, 'wb') as f:
                         f.write(file)
                         logging.info('WAV file received and saved.')
@@ -122,7 +123,7 @@ class Server():
                     self.notice_stream_end()
                 except revChatGPT.typings.Error as e:
                     logging.error(e.__str__())
-                    logging.info('Something wrong with OPENAI, sending: %s' % GPT.tune.error_reply)
+                    logging.info('Something wrong with LLM service, sending: %s' % GPT.tune.error_reply)
                     self.send_voice(GPT.tune.error_reply, 1)
                     self.notice_stream_end()
                 except requests.exceptions.RequestException as e:
@@ -163,7 +164,7 @@ class Server():
                 file_data += data[0:-2]
                 break
             if not data:
-                # logging.info('Waiting for WAV...')
+                logging.info('Waiting for WAV...')
                 continue
             file_data += data
 

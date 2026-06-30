@@ -24,9 +24,14 @@ For other part of the project, please refer to:
 Tested:
    - Deepseek
       - deepseek-v4-flash
-Not tested:
-   - Deepseek
       - deepseek-v4-pro
+   - Gemini
+      - gemini-3.5-flash
+   - Mimo
+      - mimo-v2.5
+      - mimo-v2.5-pro
+
+Not tested:
    - ChatGPT
       - gpt-5.5
       - gpt-5.4
@@ -38,18 +43,8 @@ Not tested:
       - claude-haiku-4-5
    - GLM
       - GLM-5.1
-   - Mimo
-      - mimo-v2-flash
-      - mimo-v2-omni
-      - mimo-v2.5
-      - mimo-v2-pro
-      - mimo-v2.5-pro
    - Grok
       - grok-4.3
-   - MiniMax
-      - MiniMax-M3
-      - MiniMax-M2.7
-      - MiniMax-M2.7-highspeed
    - Qwen
       - qwen3.7-max
       - qwen3.7-plus
@@ -57,6 +52,12 @@ Not tested:
    - Kimi
       - kimi-k2.6
       - kimi-k2.5
+
+Never Support(Open Thinking Default):
+   - MiniMax
+      - MiniMax-M3
+      - MiniMax-M2.7
+      - MiniMax-M2.7-highspeed
 
 ## Getting stuffs ready to roll:
 ### Clone this repo
