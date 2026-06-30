@@ -67,7 +67,7 @@ git clone https://github.com/xiaoliyuanpp/Digital_Life_Reforged.git --recursive
 ### Install
    *Only Windows* Download [Python 3.10 For Windows](https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe)  
 
-   Run ```install.bat``` for fast installation
+   Run ```install.bat```(None NVIDIA GPU)/```install_cuda.bat```(NVIDIA GPU) for fast installation
    
    For full guide,please read [Install Guide](Install.md)
 

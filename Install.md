@@ -9,6 +9,7 @@
 python -m venv venv
 ```
 If you don't want to use virtualvenv, please remove '.\venv\Scripts\python.exe -m'
+
 2. Install PyTorch
 > You can run `nvcc --version` in terminal，find `Cuda compilation tools` to see the cuda version.
 
@@ -33,13 +34,13 @@ For **NONE NVIDIA GPU**：
 ```
 cd "TTS/vits/monotonic_align"
 mkdir monotonic_align
-python setup.py build_ext --inplace
-copy .\\monotonic_align\\*.pyd .\\
+..\..\..\venv\Scripts\python.exe setup.py build_ext --inplace
+copy .\monotonic_align\*.pyd .\
 ```
 
 5. For **NONE NVIDIA GPU**
 
-​	Edit ```Digital_Life_Reforged\TTS\TTService.py``` line 36
+​	Edit ```Digital_Life_Reforged\TTS\TTService.py``` line 36~40
 
 ```python
 From
