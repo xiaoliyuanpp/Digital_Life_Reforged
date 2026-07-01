@@ -1,8 +1,6 @@
 # Digital Life Reforged
 **Yet another voice assistant, but alive.**
 
-[简体中文](README_CN.md)
-
 Three years ago,Geekerwan released [Digital Life](https://www.bilibili.com/video/BV1bm4y117ba/). However, the big pie that the project once painted in the video, such as adding more model support, character support and listing on Steam, has not been realized until now. In fact, because LLM models were updated, it can't work now if you use the original version.
 ## Forked from
    - [Digital_Life_Server](https://github.com/zixiiu/Digital_Life_Server)
