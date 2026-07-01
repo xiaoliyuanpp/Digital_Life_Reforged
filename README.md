@@ -11,10 +11,9 @@ For other part of the project, please refer to:
 [UE Client](https://github.com/QSWWLTN/DigitalLife)    
 
 ## Features
-   - Contexts
    - Full OpenAI API Support(Included 3rd-party models)
    - Anthropic/Gemini API
-   - 
+   - ......
 
 ## Support models
 **If you want to support other models which compatible with OpenAI/Anthropic API,use --base_url argument to set the base url.**
