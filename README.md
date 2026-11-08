@@ -64,7 +64,7 @@ git clone https://github.com/xiaoliyuanpp/Digital_Life_Reforged.git --recursive
 ### Install
    *Only Windows* Download [Python 3.10 For Windows](https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe)  
 
-   Run ```install.bat```(None NVIDIA GPU)/```install_cuda.bat```(NVIDIA GPU) for fast installation
+   Run ```install.bat```(None NVIDIA GPU)/```install_cuda.bat```(NVIDIA GPU) for fast installation *(For Windows,Python 3.10 MUST in PATH)*
    
    For full guide,please read [Install Guide](Install.md)
 
@@ -79,7 +79,14 @@ git clone https://github.com/xiaoliyuanpp/Digital_Life_Reforged.git --recursive
    
 ### Start the server
    ```bash
-   python SocketServer.py --chatVer {1:OpenAI API/2:Anthropic API/3:Gemini API} --APIKey {Your API Key} --model {[Compatible models]} --stream {True/False} --character {character} --proxy {Proxy url} --base_url {Custom base url}
+   python SocketServer.py \
+   --chatVer {1:OpenAI API/2:Anthropic API/3:Gemini API} \
+   --APIKey {Your API Key} \
+   --model {[Compatible models]} \
+   --stream {True/False} \
+   --character {character} \
+   --proxy {Proxy url} \
+   --base_url {Custom base url}
    ```
 
 This translation was done using Google's translation tool and my poor English skills; please feel free to correct any errors.
