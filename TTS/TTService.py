@@ -35,9 +35,9 @@ class TTService():
         if torch.cuda.is_available():
             self.device = torch.device("cuda")
             logging.info("Using NVIDIA CUDA GPU")
-        elif torch.backends.mps.is_available():
-            self.device = torch.device("mps")
-            logging.info("Using Apple Silicon MPS GPU")
+        # elif torch.backends.mps.is_available():
+        #     self.device = torch.device("mps")
+        #     logging.info("Using Apple Silicon MPS GPU")
         else:
             self.device = torch.device("cpu")
             logging.info("Using CPU")
